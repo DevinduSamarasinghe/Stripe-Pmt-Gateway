@@ -3,6 +3,6 @@ import { charge, paymentIntent } from "../controllers/pmtController.js";
 
 const router = express.Router();
 
-router.post("/checkout",paymentIntent,charge);
+router.post("/checkout",charge);
 
 export default router;
