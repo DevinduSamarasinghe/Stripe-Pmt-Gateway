@@ -2,7 +2,6 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv/config";
-import { v4 as uuidv4 } from "uuid";
 import Stripe from "stripe";
 import router from "./routes/pmtRoute.js";
 
@@ -17,8 +16,8 @@ const PORT = process.env.PORT || 5000;
 
 //Since we are using one router, we,ll use one
 
-//post request
-app.use("/",router)
+//post request 
+app.use("/", router);
 
 app.listen(PORT, () => {
   console.log(`Server is up and running in PORT: ${PORT}`);
